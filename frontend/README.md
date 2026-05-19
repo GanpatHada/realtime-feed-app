@@ -1,3 +1,7 @@
+# Real-time Feed App - Frontend
+
+[![Watch the demo](public/images/play-button-image.jpeg)](https://share.zight.com/DOuZ7rzj)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
