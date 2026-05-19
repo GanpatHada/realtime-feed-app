@@ -25,7 +25,7 @@ function AdminPage() {
         try {
             setLoading(true);
             setSuccess(false);
-            const response = await fetch("http://localhost:5000/feed", {
+            const response = await fetch("https://realtime-feed-app.onrender.com/feed", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

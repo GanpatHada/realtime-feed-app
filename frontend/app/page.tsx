@@ -36,7 +36,7 @@ export default function HomePage() {
 
   const fetchFeeds = async () => {
     try {
-      const response = await fetch("http://localhost:5000/feed");
+      const response = await fetch("https://realtime-feed-app.onrender.com/feed");
       const data = await response.json();
       setFeeds(data);
     } catch (error) {

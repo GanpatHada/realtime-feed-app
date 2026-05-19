@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import Link from "next/link";
 
 export default function AdminPage() {
   const [message, setMessage] = useState<string>("");
@@ -15,7 +14,7 @@ export default function AdminPage() {
     try {
       setLoading(true);
       setSuccess(false);
-      const response = await fetch("http://localhost:5000/feed", {
+      const response = await fetch("https://realtime-feed-app.onrender.com/feed", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -36,18 +35,8 @@ export default function AdminPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-slate-50">
+    <div className="flex flex-col items-center pt-12 p-6">
       <div className="w-full max-w-md">
-        <Link 
-          href="/" 
-          className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 mb-8 transition-colors"
-        >
-          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-          </svg>
-          Back to Feed
-        </Link>
-
         <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/60 p-8 border border-slate-100">
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-slate-900">Admin Control</h1>
